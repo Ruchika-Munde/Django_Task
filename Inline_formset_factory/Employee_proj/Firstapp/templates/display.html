@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display_page</title>
+</head>
+<body bgcolor="#cceb34">
+{% for var in l %}
+{{var.Lname}}
+
+<button type="submit"><a href="/add/{{var.id}}/">Add</a> </button><br>
+{% endfor %}
+</body>
+</html>

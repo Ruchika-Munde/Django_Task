@@ -1,0 +1,36 @@
+<html>
+
+    <head>
+        <title>post detail</title>
+    </head>
+
+    <body>
+        <h2>Post Details !!!!</h2>
+       
+            
+            Title: {{pobj.title}}<br>
+            Description : {{pobj.description}} <br>
+            File:<a href="{{pobj.fileupload.url}}">{{pobj.fileupload}}</a><br>
+            File content : <embed src="{{pobj.fileupload.url}}" type="application/pdf" width="100%" height="500px">
+            Tag : {{pobj.ptag}} <br>     
+            Post by User :{{pobj.postbyuser}}<br><br>
+            
+          
+            
+            {% for i in pobj.comment_set.all %}<br>
+            Your Answer: {{i.commentbox}}<br>
+            {{i.cfileupload}}
+            commentbyuser: {{i.commentbyuser}}<br>
+            {% endfor %} 
+         
+           <br> <form action="/commentapp/addcomment/{{pobj.id}}/" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <br><br>
+                <button type="submit">Add Comment</button>
+            </form>
+           
+<button type="submit"><a href="/postapp/showpost/">Logout</a></button>
+        </body>
+</html>
+

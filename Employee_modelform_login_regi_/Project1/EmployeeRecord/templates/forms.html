@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form_page</title>
+</head>
+<!--<body bgcolor="#34ebb1">-->
+<form action="/fa/form_view/" method="post" align="center">
+     <br> <br> <br> <br>
+    <h2>Employee reigtration Form</h2>
+
+    <br>
+    <table border="2px" align="center">
+        <tr >
+             {% csrf_token %}
+        <td>{{e.as_p}}<button type="submit">Submit</button></td>
+
+        </tr>
+
+    </table>
+
+   <br>
+
+</form>
+</body>
+</html>

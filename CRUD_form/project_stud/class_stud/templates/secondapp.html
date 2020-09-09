@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Second App</title>
+</head>
+<body>
+<ul>
+    {% for x in result %}
+    <li>
+
+        {{x.Name}}
+
+
+<!--Using GET method-->
+<!--        <form action="'/delete/" method="GET">-->
+<!--            <input type="hidden" name="id" value="{{x.Name}}">-->
+<!--            <button type="Submit">Delete</button>-->
+<!--        </form>-->
+
+<!--        using button nd form-->
+<!--        <form action="/delete/{{x.id}}/" method="POST">-->
+<!--        {% csrf_token %}-->
+<!--            <button type="button" name="btnDelete">Delete</button>-->
+<!--        </form>-->
+
+        <a href="/sa/delete1/{{x.id}}/">Delete</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button type="submit"><a href="/sa/update1/{{x.id}}/">Update</a> </button>
+    </li>
+    {% endfor %}
+</ul>
+
+<form action ="/sa/add1/" method="POST" > <!--add1 is url from views.add-->
+    {% csrf_token %}
+    Name: <input type="text" placeholder="enter name" name="txtName">
+    <button type="submit" name="btnSubmit">Submit</button>
+</form>
+</body>
+</html>

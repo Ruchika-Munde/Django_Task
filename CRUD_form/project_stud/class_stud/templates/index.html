@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index page</title>
+</head>
+<body>
+<!--{{data}}<br>-->
+<table>
+    <thead>
+    <th>Name</th>&nbsp;
+    <th>&nbsp; &nbsp;&nbsp;Roll NO</th>
+    <th>&nbsp;&nbsp;&nbsp;Marks </th>
+    <th>&nbsp;&nbsp;&nbsp;Address</th>
+    </thead>
+    {% for x in result %}
+    <tr>
+        <td>&nbsp;&nbsp;{{x.Name}}</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{x.Rollno}}</td>
+        <td>&nbsp;&nbsp;&nbsp;{{x.Marks}}</td>
+        <td>&nbsp;&nbsp;&nbsp;{{x.Address}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

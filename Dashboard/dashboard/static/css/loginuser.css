@@ -1,0 +1,40 @@
+body {
+    background-image: url("https://tse3.mm.bing.net/th?id=OIP.cD_nzZ-6I6jsOFyG4oq71gHaEo&pid=Api&P=0&w=248&h=156");
+    background-repeat: no-repeat, repeat;
+    background-size:cover;
+  }
+  .jumbotron{
+    margin-top:70px;
+   background:#99e6e6;
+    color:white;
+     min-height: 600px;
+     max-width: 500px;
+  }
+  
+  h2 {
+    color: #ff6600;
+  }
+  
+  img{
+    width: 80;
+  }
+
+  button{
+    background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  }
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  

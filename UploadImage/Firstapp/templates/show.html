@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+</head>
+<body>
+{% for x in obj %}
+    {{x.imagename}}
+
+ <img src="{{x.Image.url}}">
+{{x.summary}}<br><br><br>
+{% endfor %}
+</body>
+</html>

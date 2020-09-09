@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display_page</title>
+</head>
+<body>
+<table align="center" border="1">
+    <thead>
+    <th>RollNo</th>
+    <th>Name</th>
+    <th>Marks</th>
+    <th>Address</th>
+    </thead>
+{% for var in stud %}
+    <tr>
+        <td>{{var.rollno}}</td>
+        <td>{{var.name}}</td>
+        <td>{{var.marks}}</td>
+        <td>{{var.addr}}</td>
+        <td><button type="submit"><a href="/delete/{{var.id}}/">Delete</a> </button></td>
+        <td><button type="submit"><a href="/update/{{var.id}}/">Update</a> </button></td>
+    </tr>
+
+{% endfor %}
+    </table>
+</body>
+</html>

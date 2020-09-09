@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Page</title>
+</head>
+<body>
+<form action="/sa/update1/{{obj.id}}/" method="post">
+    {% csrf_token %}
+   <input type="text" name="txtupdate" value="{{obj.Name}}">  <!-- Name is refered from atttribute or field name of class i.e. models.py-->
+    <button type="submit" >update</button>
+</form>
+
+</body>
+</html>

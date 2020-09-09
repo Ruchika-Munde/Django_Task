@@ -1,0 +1,10 @@
+body {
+  background-image: url("https://tse3.mm.bing.net/th?id=OIP.ARAPJo0YSY4ijagWYkBg_AHaEc&pid=Api&P=0&w=300&h=181");
+  background-repeat: no-repeat, repeat;
+  background-size:cover;
+}
+.jumbotron{
+   margin-top:150px;
+   background:#000033;
+   color:white;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update_page</title>
+</head>
+<body bgcolor="#31ad90">
+<form action="/form/form_update/{{data.id}}/" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Update</button>
+
+<!--    <table align="center" border="1">-->
+<!--    <tr>-->
+<!--        <td><input type="text" name="txteid" value="{{obj.eid}}"> </td>-->
+<!--        <td><input type="text" name="txtename" value="{{obj.ename}}"> </td>-->
+<!--        <td><input type="text" name="txtdesign" value="{{obj.designation}}"> </td>-->
+<!--        <td><input type="text" name="txtsal" value="{{obj.salary}}"> </td>-->
+<!--        <td><button type="submit">Update</button></td>-->
+<!--    </tr>-->
+
+<!--    </table>-->
+
+</form>
+</body>
+</html>

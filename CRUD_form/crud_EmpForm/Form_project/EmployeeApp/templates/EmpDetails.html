@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <title>Employee Detail Page</title>
+    <style>
+
+    table, th, td
+    {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+    padding: 8px;
+   text-align: center;
+}
+th{
+ background-color:  #00e68a;
+</style>
+    <h1 align="center">Employee Registration Form </h1>
+    &nbsp;&nbsp;&nbsp;
+</head>
+<body bgcolor="	#e6ff99">
+<table style="width:80%" align="center" bgcolor="#ccffcc">
+
+  <tr>
+    <th>Name</th>
+    <th>Company</th>
+    <th>Designation</th>
+    <th>Salary</th>
+      <th>Action</th>
+  </tr>
+    {% for var in result %}
+    <tr>
+    <td>{{var.Name}}</td>
+    <td>{{var.Company}}</td>
+    <td>{{var.Designation}}</td>
+    <td>{{var.Salary}}</td>
+        <td><li><a href="/delete/{{var.id}}/">Delete</a></li><li><a href="/update/{{var.id}}/">Update</a></li></td>
+  </tr>
+    {% endfor %}
+</table>
+
+<form action="/add/" method="post">
+    {% csrf_token %}
+&nbsp;&nbsp;&nbsp;&nbsp;
+<table   align="center" bgcolor="#ccffcc">
+<th>Add Details :</th>
+    <tr ><td align="left">Name :<input type="text" placeholder="Enter Name" name="txtname"></td></tr>
+    <tr><td>Company :<input type="text" placeholder="Enter Company Name" name="txtcomp"></td></tr>
+    <tr><td>Designation :<input type="text" placeholder="Enter Designation" name="txtdesi"></td></tr>
+    <tr><td>Salary :<input type="text" placeholder="Enter Salary" name="txtsal"></td></tr>
+    <tr><td><button type="submit" name="btnsubmit">SUBMIT</button></td></tr>
+ </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h2>Welcome to home page !!!!</h2>
+    <form action="/firstapp/add/" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}<br>
+        <button type="submit">Submit</button>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    {% load crispy_forms_tags %}
+    <head>
+        <title>Add post</title>
+    </head>
+
+    <body align:left='50px'>
+        <h2>Add post here!!!!</h2>
+        <br><br>
+        <form  action="/postapp/addpost/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{pform|crispy}}<br>
+            <button type="submit">Submit</button>
+        </form>
+        <button type="submit"><a href="/postapp/showpost/">Logout</a></button>
+    </body>
+</html>

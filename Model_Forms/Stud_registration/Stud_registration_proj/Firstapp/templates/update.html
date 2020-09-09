@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/form/form_update/{{obj.id}}/" method="post">
+    {% csrf_token %}
+    <table align="center" border="1"
+        <tr>
+            <td><input type="text" name="txtsid" value="{{obj.sid}}"></td>
+            <td><input type="text" name="txtsname" value="{{obj.sname}}"></td>
+            <td><input type="text" name="txtmarks" value="{{obj.marks}}"></td>
+            <td><input type="text" name="txtaddr" value="{{obj.addr}}"></td>
+            <td><button type="submit">Update</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

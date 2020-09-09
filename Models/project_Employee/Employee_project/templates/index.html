@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;Employee Details : </h2>
+</head>
+<body>
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Company</th>
+    <th>Salary</th>
+    <th>Experience</th>
+    </thead>
+    {% for x in result %}
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;{{x.Name}}&nbsp;&nbsp;</td>
+        <td>&nbsp;&nbsp;&nbsp;{{x.Company}}&nbsp;&nbsp;</td>
+        <td>&nbsp;&nbsp;&nbsp;{{x.Salary}}&nbsp;&nbsp;</td>
+        <td>&nbsp;&nbsp;&nbsp;{{x.Experience}}&nbsp;&nbsp;</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

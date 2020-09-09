@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display_page</title>
+</head>
+<!--<body bgcolor="#cceb34">-->
+<form  align="center">
+     <br> <br> <br> <br>
+    <h2>Employee Information </h2>
+
+<table border="2px" align="center" >
+
+    <thead>
+    <th>Eid</th>
+    <th>Name</th>
+    <th>Designation</th>
+    <th>Salary</th>
+    <th>Actions</th>
+    </thead>
+    {% for e in result %}
+    <tr>
+        <td>{{e.eid}}</td>
+        <td>{{e.ename}}</td>
+        <td>{{e.designation}}</td>
+        <td>{{e.salary}}</td>
+        <td><a href="/fa/form_update/{{e.id}}">Update</a> </td>
+        <td><a href="/fa/form_delete/{{e.id}}">Delete</a> </td>
+    </tr>
+    {% endfor %}
+
+</table><br>
+    <br>
+    <td>
+    <button type="submit"><a href="/login/">Logout</a> </button></td>
+</form>
+</body>
+</html>

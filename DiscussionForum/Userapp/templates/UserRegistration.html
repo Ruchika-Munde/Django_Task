@@ -1,0 +1,17 @@
+
+<html>
+    {% load crispy_forms_tags %}
+    <head>
+        <title>Registration Page</title>
+    </head>
+
+    <body>
+        <div>
+            <form action="/userapp/user_reg/" method="POST">
+                {% csrf_token %}
+                {{userform|crispy}}<br>
+                <button type="submit">Submit</button>    
+            </form>
+        </div>
+    </body>
+</html>

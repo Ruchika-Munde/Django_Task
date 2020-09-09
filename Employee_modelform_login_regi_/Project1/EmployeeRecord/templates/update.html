@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update_page</title>
+</head>
+<!--<body bgcolor="#31ad90">-->
+<form action="/fa/form_update/{{data.id}}/" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Update</button>
+
+</form>
+</body>
+</html>

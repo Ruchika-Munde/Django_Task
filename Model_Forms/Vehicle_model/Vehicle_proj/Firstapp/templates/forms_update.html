@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update_data</title>
+</head>
+<body>
+<form action="/update/{{data.id}}/" method="post" >
+    <h2>Vehicle Information</h2>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Update</button>
+
+</form>
+
+</body>
+</html>

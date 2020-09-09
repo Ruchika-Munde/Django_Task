@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Display page</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <th>Name </th>&nbsp;&nbsp;&nbsp;&nbsp;
+                <th>Email </th>&nbsp;&nbsp;
+            </thead>
+            {% for x in data %}
+            <tr>
+                <td>{{x.name}}</td>
+                <td>{{x.email}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br>
+        <button type="submit"><a href="/firstapp/add/">ADD</a></button>
+    </body>
+</html>

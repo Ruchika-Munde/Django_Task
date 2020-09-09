@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th>Catagory</th>
+    <th>Price</th>
+    <th>Pattern</th>
+    </thead>
+    {% for x in result %}
+    <tr>&nbsp;&nbsp;&nbsp;
+        <td>{{x.Catagory}}</td>
+        <td>&nbsp;&nbsp;{{x.Price}}</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{x.Pattern}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

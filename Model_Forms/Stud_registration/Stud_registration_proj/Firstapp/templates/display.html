@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display page</title>
+</head>
+<body bgcolor="Yellow">
+<table align="center" border="1">
+    <thead>
+    <th>Sid</th>
+    <th>Name</th>
+    <th>Marks</th>
+    <th>Address</th>
+    <th>Actions</th>
+    </thead>
+
+        {% for s in result %}
+     <tr>
+      <td>{{s.sid}}</td>
+      <td>{{s.sname}}</td>
+      <td>{{s.marks}}</td>
+      <td>{{s.addr}}</td>
+         <td><button type="submit"><a href="/form/form_update/{{s.id}}" >Update</a></button> </td>
+
+         <td><button type="submit"><a href="/form/form_delete/{{s.id}}" >Delete</a></button> </td>
+ </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>home page</title>
+    </head>
+    <body>
+        <h2>Posts !!!</h2>
+        {% for x in obj %}
+           <a href="/postapp/postdetail/{{x.id}}/">{{x.title}}</a>
+           <br><br>
+        {% endfor %}
+
+        <div>
+            <form action="/postapp/addpost/">
+                <button type="submit">Add Post</button> 
+            </form> 
+        </div>
+    </body>
+</html>

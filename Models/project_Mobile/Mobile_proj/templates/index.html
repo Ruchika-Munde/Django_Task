@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Details</title>
+    <h2>Mobile Details : </h2>
+</head>
+<body>
+<table>
+    <thead>
+    <th>Brand</th>
+    <th>Model Name</th>
+    <th>Price</th>
+    <th>Ram</th>
+    </thead>
+    {% for x in result %}
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;{{x.Brand}}</td>
+        <td>&nbsp;&nbsp;&nbsp;{{x.ModelName}}</td>
+        <td>&nbsp;&nbsp;&nbsp;{{x.Price}}</td>
+        <td>&nbsp;&nbsp;&nbsp;{{x.Ram}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert_Data</title>
+</head>
+<body>
+<form action="/add/" method="post">
+    {% csrf_token %}
+    {{adds.as_p}}
+    <button type="submit">Insert</button>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display_page</title>
+</head>
+<body>
+{%  for var in e %}
+{{var.eno}}
+{{var.ename}}
+{{var.esal}}
+{{var.eaddr}}
+{{var.email}}
+<button type="submit"><a href="/update/{{var.id}}/">Update</a></button>
+<button type="submit"><a href="/delete/{{var.id}}/">Delete</a></button>
+<br><br>
+{% endfor %}
+</body>
+</html>

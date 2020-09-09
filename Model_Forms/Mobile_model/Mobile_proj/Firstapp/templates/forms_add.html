@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert_data</title>
+</head>
+<body>
+<form action="/add/" method="post" >
+    <h2>Mobile Information</h2>
+    {% csrf_token %}
+    {{add.as_p}}
+    <button type="submit">Insert</button>
+
+</form>
+
+</body>
+</html>

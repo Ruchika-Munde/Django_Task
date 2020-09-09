@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update page</title>
+</head>
+<body>
+<form action="/update/{{obj.id}}/" method="post">
+    {% csrf_token %}
+    <input type="text" name="txtuname" value="{{obj.Name}}">
+    <input type="text" name="txtucomp" value="{{obj.Company}}"}>
+    <input type="text" name="txtudesi" value="{{obj.Designation}}">
+    <input type="text" name="txtusal" value="{{obj.Salary}}">
+    <button type="submit">Update</button>
+
+</form>
+</body>
+</html>

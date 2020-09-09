@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form_update</title>
+</head>
+<body>
+<form action="/update/{{data.id}}/" method="post">
+{% csrf_token %}
+    {{Form.as_p}}
+    <button type="submit">Insert</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+    <head>
+
+        <title>
+            Apply Resume
+        </title>
+    </head>
+    <body>
+
+        <h2>Applied for jobs</h2>
+    {% for var in user_resume %}
+        <!-- <iframe src="{{var.Resume.url}}"></iframe> -->
+        <a href="{{var.Resume.url}}">{{var.Name}}</a>
+    {% endfor %} 
+    </body>
+</html>

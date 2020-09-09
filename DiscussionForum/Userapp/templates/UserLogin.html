@@ -1,0 +1,17 @@
+<html>
+    {% load crispy_forms_tags %}
+    <head>
+        <title>Login Page</title>
+    </head>
+    <body>
+        <h2>Login Here !!!</h2>
+        <div>
+            <form action="/userapp/user_login/" method="POST">
+                {% csrf_token %}
+                {{form|crispy}}<br>
+                <button type="submit">Login</button>
+
+            </form>
+        </div>
+    </body>
+</html>
